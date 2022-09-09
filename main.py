@@ -21,7 +21,7 @@ from os import system
 
 
 
-title = ctypes.windll.kernel32.SetConsoleTitleW("                                        STRIPERR ~ Made by knq#0666 & Finx#0007 ~ Declined: " + (str(declinedccs)) + " ~ CCN / CVV: " + (str(ccncvv)) + " ~ Charged: " + (str(charged)))
+
 
 # we do this title thing so we dont flood vs code lol, its pretty much a shortcut for the command
 
@@ -38,8 +38,6 @@ os.system('cls')
 # change the logo if u want, but keep the credits
 
 logo = '''
-
-
                   ███████╗████████╗██████╗ ██╗██████╗ ███████╗██████╗ ██████╗ 
                   ██╔════╝╚══██╔══╝██╔══██╗██║██╔══██╗██╔════╝██╔══██╗██╔══██╗
                   ███████╗   ██║   ██████╔╝██║██████╔╝█████╗  ██████╔╝██████╔╝
@@ -47,8 +45,6 @@ logo = '''
                   ███████║   ██║   ██║  ██║██║██║     ███████╗██║  ██║██║  ██║
                   ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
                              Made with <3 by knq#0666 & Finx#0007
-
-
 '''
 
 
@@ -56,7 +52,7 @@ def main():
 
     # this is the main gui
 
-    title
+    ctypes.windll.kernel32.SetConsoleTitleW("                                        STRIPERR ~ Made by knq#0666 & Finx#0007 ~ Declined: " + (str(declinedccs)) + " ~ CCN / CVV: " + (str(ccncvv)) + " ~ Charged: " + (str(charged)))
     print(Fore.BLUE + logo)
     print(Fore.BLUE + '                             [1] CHARGED CC CHECKER [ NO SK KEY ]')
     print('')
@@ -106,15 +102,15 @@ def main():
 
               print(Fore.RED + '[-] Declined - ' + (str(cc)))
               declinedccs = declinedccs + 1
-              title
+              ctypes.windll.kernel32.SetConsoleTitleW("                                        STRIPERR ~ Made by knq#0666 & Finx#0007 ~ Declined: " + (str(declinedccs)) + " ~ CCN / CVV: " + (str(ccncvv)) + " ~ Charged: " + (str(charged)))
             if r.text.startswith("#LIVE"):
               print(Fore.YELLOW + '[+] CCN/CVV - ' + (str(cc)))
               ccncvv = ccncvv + 1
-              title
+              ctypes.windll.kernel32.SetConsoleTitleW("                                        STRIPERR ~ Made by knq#0666 & Finx#0007 ~ Declined: " + (str(declinedccs)) + " ~ CCN / CVV: " + (str(ccncvv)) + " ~ Charged: " + (str(charged)))
             if 'CHARGED' in r.text:
               print(Fore.YELLOW + '[=] CHARGED - ' + (str(cc)))
               charged = charged + 1
-              title
+              ctypes.windll.kernel32.SetConsoleTitleW("                                        STRIPERR ~ Made by knq#0666 & Finx#0007 ~ Declined: " + (str(declinedccs)) + " ~ CCN / CVV: " + (str(ccncvv)) + " ~ Charged: " + (str(charged)))
                        
         
         check1()
@@ -123,7 +119,7 @@ def main():
 
         # (str(declinedccs)) means we just turn the counter into a string so we can print it
 
-        title
+        ctypes.windll.kernel32.SetConsoleTitleW("                                        STRIPERR ~ Made by knq#0666 & Finx#0007 ~ Declined: " + (str(declinedccs)) + " ~ CCN / CVV: " + (str(ccncvv)) + " ~ Charged: " + (str(charged)))
         print(Fore.RED + '[!] Checking results:')
         print('\n')
         print(Fore.RED + '[-] Declined CCS: ' + (str(declinedccs)))
